@@ -9,15 +9,18 @@
           <field name='type'>form</field>
           <field name='arch' type='xml'>
           <form string='sample crud'>
-              <group>
-                  <field name='name'/>
-                  <field name='summary'/>
-                  <field name='description'/>
+              <label for="name" class="oe_edit_only"/>
+              <field name="photo" widget="image" class="oe_avatar oe_right"/>
+              <h1><field name='name' class="oe_inline" /></h1>
+              <field name='summary' class="oe_inline"/>
+              <group string="Information">
+                  <field name='classification' class="oe_inline"/>
                   <field name='active'/>
                   <field name='position'/>
                   <field name='value'/>
-                  <field name='photo'/>
-                  <field name='classification'/>
+              </group>
+              <group string="Information2">
+                  <field name='description'/>
               </group>
             </form>
             </field>
