@@ -36,6 +36,11 @@ class ZaySampleCrudAdvanced(models.Model):
     value = fields.Float()
     photo = fields.Binary()
     classification = fields.Selection(selection=[('class1', 'Class 1'), ('class2', 'Class 2') ])
+    category = fields.Many2one("zay.sample.crud.advanced.category", "Category")
+    tags =  fields.Many2many(comodel_name='zay.sample.crud.advanced.tags',
+                             relation='zay_sample_crud_advanced_tags_rel',
+                             column1='crud_id',column2='tags_id', string="Tags")
+
 
     # Exemplo de campos avancado
     #aselection = fields.Selection(selection='a_function_name')

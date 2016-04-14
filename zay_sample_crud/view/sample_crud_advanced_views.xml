@@ -12,12 +12,16 @@
               <label for="name" class="oe_edit_only"/>
               <field name="photo" widget="image" class="oe_avatar oe_right"/>
               <h1><field name='name' class="oe_inline" /></h1>
-              <field name='summary' class="oe_inline"/>
+              <group>
+                  <field name="category"/>
+                  <field name='classification' class="oe_inline"/>                  
+                  <field name="tags" widget="many2many_tags"/>
+              </group>
               <group string="Information">
-                  <field name='classification' class="oe_inline"/>
                   <field name='active'/>
                   <field name='position'/>
                   <field name='value'/>
+                  <field name='summary' class="oe_inline"/>
               </group>
               <group string="Information2">
                   <field name='description'/>

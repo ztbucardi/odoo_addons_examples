@@ -29,5 +29,4 @@ class ZaySampleCrudAdvancedTags(models.Model):
 
     name = fields.Char( string = 'Nome')
     description = fields.Text()
-    active = fields.Boolean(string = 'Ativo ')
     value = fields.Float()

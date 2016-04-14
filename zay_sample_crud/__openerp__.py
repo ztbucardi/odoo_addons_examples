@@ -21,7 +21,7 @@
     'name': "Zaytech - Sample of CRUD",
 
     'category': 'Uncategorized',
-    'version': '0.07',
+    'version': '0.10',
     "license": "AGPL-3",
     'author': "Leandro Augusto <leandro@leandroaugusto.eti.br>",
 
