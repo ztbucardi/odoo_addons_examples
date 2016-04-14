@@ -18,26 +18,22 @@
 ###############################################################################
 
 {
-    'name': "Zaytech - Sample of CRUD",
+    'name': "Zaytech - Workflow State of CRUD",
 
     'category': 'Tools',
-    'version': '0.10',
+    'version': '0.3',
     "license": "AGPL-3",
     'author': "Leandro Augusto <leandro@leandroaugusto.eti.br>",
 
     'website': "http://www.leandroaugusto.eti.br",
-    'summary': """Addons exemplo para implementar um sistema de CRUD""",
+    'summary': """Addons exemplo para implementar workflow ao CRUD""",
     'description': """
-        Este addons tem a estrutura base para implementar um sistema de CRUD
+        Este addons tem a estrutura base para implementar um workflow
+        de state no sistema de CRUD
         """,
-    'depends': ['base'],
+    'depends': ['base','zay_sample_crud'],
     'data': [
-        'view/sample_crud_menu.xml',
-        'view/sample_crud_views.xml',
-        'view/sample_crud_advanced_views.xml',
-        'view/sample_crud_advanced_category_views.xml',
-        'view/sample_crud_advanced_tags_views.xml',
-        #'view/sample_crud_workflow.xml',
+        'view/sample_crud_workflow.xml',
     ],
     'installable': True,
     'auto_install': True,

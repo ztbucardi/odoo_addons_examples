@@ -2,6 +2,7 @@
 ###############################################################################
 #                                                                             #
 # Copyright (C) 2016 - Leandro Augusto  <leandro@leandroaugusto.eti.br>       #
+# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).               #
 #                                                                             #
 # This program is free software: you can redistribute it and/or modify        #
 # it under the terms of the GNU Affero General Public License as published by #
@@ -17,28 +18,5 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.       #
 ###############################################################################
 
-{
-    'name': "Zaytech - Sample of CRUD",
-
-    'category': 'Tools',
-    'version': '0.10',
-    "license": "AGPL-3",
-    'author': "Leandro Augusto <leandro@leandroaugusto.eti.br>",
-
-    'website': "http://www.leandroaugusto.eti.br",
-    'summary': """Addons exemplo para implementar um sistema de CRUD""",
-    'description': """
-        Este addons tem a estrutura base para implementar um sistema de CRUD
-        """,
-    'depends': ['base'],
-    'data': [
-        'view/sample_crud_menu.xml',
-        'view/sample_crud_views.xml',
-        'view/sample_crud_advanced_views.xml',
-        'view/sample_crud_advanced_category_views.xml',
-        'view/sample_crud_advanced_tags_views.xml',
-        #'view/sample_crud_workflow.xml',
-    ],
-    'installable': True,
-    'auto_install': True,
-}
+from . import models
+#from .hooks import pre_init_hook, post_init_hook, uninstall_hook

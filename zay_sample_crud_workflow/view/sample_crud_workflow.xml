@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='utf-8'?>
+<openerp>
+    <data>
+      <!-- #####################################################  -->
+      <!-- Exemple for Workflow  -->
+
+      <!-- Actions for workflow  -->
+       <record id="zay_sample_crud_workflow_wkf" model="workflow">
+          <field name="name">zay.sample.crud.workflow.wkf</field>
+          <field name="osv">zay.sample.crud.advanced</field>
+          <field name="on_create">True</field>
+       </record>
+
+       <record id="activity_start" model="workflow.activity">
+          <field name="wkf_id" ref="zay_sample_crud_workflow_wkf"/>
+          <field name="flow_start">True</field>
+          <field name="name">start</field>
+          <field name="kind">function</field>
+          <field name="action">write({'state':'start'})</field>
+       </record>
+
+       <record id="activity_flow1" model="workflow.activity">
+          <field name="wkf_id" ref="zay_sample_crud_workflow_wkf"/>
+          <field name="name">fase1</field>
+          <field name="kind">function</field>
+          <field name="action">write({'state':'flow1'})</field>
+       </record>
+
+       <record id="activity_flow2" model="workflow.activity">
+          <field name="wkf_id" ref="zay_sample_crud_workflow_wkf"/>
+          <field name="name">fase1</field>
+          <field name="kind">function</field>
+          <field name="action">write({'state':'flow2'})</field>
+       </record>
+
+       <record id="activity_done" model="workflow.activity">
+          <field name="wkf_id" ref="zay_sample_crud_workflow_wkf"/>
+          <field name="flow_stop">True</field>
+          <field name="name">done</field>
+          <field name="kind">function</field>
+          <field name="action">write({'state':'done'})</field>
+       </record>
+
+
+       <!-- Trans for workflow  -->
+       <record id="trans_s_f1" model="workflow.transition">
+          <field name="act_from" ref="activity_start"/>
+          <field name="act_to" ref="activity_flow1"/>
+       </record>
+
+       <record id="trans_f1_f2" model="workflow.transition">
+          <field name="act_from" ref="activity_flow1"/>
+          <field name="act_to" ref="activity_flow2"/>
+       </record>
+
+       <record id="trans_f2_d" model="workflow.transition">
+          <field name="act_from" ref="activity_flow2"/>
+          <field name="act_to" ref="activity_done"/>
+       </record>
+
+
+  </data>
+</openerp>

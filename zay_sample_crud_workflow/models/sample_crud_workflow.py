@@ -2,6 +2,7 @@
 ###############################################################################
 #                                                                             #
 # Copyright (C) 2016 - Leandro Augusto  <leandro@leandroaugusto.eti.br>       #
+# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).               #
 #                                                                             #
 # This program is free software: you can redistribute it and/or modify        #
 # it under the terms of the GNU Affero General Public License as published by #
@@ -17,28 +18,18 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.       #
 ###############################################################################
 
-{
-    'name': "Zaytech - Sample of CRUD",
+from openerp import models, fields, api
 
-    'category': 'Tools',
-    'version': '0.10',
-    "license": "AGPL-3",
-    'author': "Leandro Augusto <leandro@leandroaugusto.eti.br>",
+import logging
+_logger = logging.getLogger(__name__)
 
-    'website': "http://www.leandroaugusto.eti.br",
-    'summary': """Addons exemplo para implementar um sistema de CRUD""",
-    'description': """
-        Este addons tem a estrutura base para implementar um sistema de CRUD
-        """,
-    'depends': ['base'],
-    'data': [
-        'view/sample_crud_menu.xml',
-        'view/sample_crud_views.xml',
-        'view/sample_crud_advanced_views.xml',
-        'view/sample_crud_advanced_category_views.xml',
-        'view/sample_crud_advanced_tags_views.xml',
-        #'view/sample_crud_workflow.xml',
-    ],
-    'installable': True,
-    'auto_install': True,
-}
+
+class ZaySampleCrudWorkflow(models.Model):
+    _inherit='zay.sample.crud.advanced'
+
+    state = fields.Selection(selection=[
+        ('start', 'Start'),
+        ('flow1', 'Etapa 1'),
+        ('flow2', 'Etapa 2'),
+        ('done',  'Done'),
+        ],default='start')
