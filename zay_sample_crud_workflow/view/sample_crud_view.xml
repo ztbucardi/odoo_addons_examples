@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<openerp>
+   <data>
+
+     <!-- improved idea categories list -->
+     <record model="ir.ui.view" id="zay_sample_crud_form2">
+         <field name="name">zay.sample.crud.advanced.form</field>
+         <field name="model">zay.sample.crud.advanced</field>
+         <field name="inherit_id" ref="zay_sample_crud.zay_sample_crud_advanced_form"/>
+         <field name="arch" type="xml">
+            <xpath expr="/form/*" position="before">
+              <header>
+                 <field name="state" widget="statusbar" clickable="True"
+                   statusbar_visible="start,flow1,flow2,done"
+                   statusbar_colors='{"init":"red","done":"blue"}' />
+              </header>
+            </xpath>
+         </field>
+     </record>
+
+
+   </data>
+</openerp>

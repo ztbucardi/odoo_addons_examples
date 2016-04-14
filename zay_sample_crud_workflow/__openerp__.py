@@ -21,7 +21,7 @@
     'name': "Zaytech - Workflow State of CRUD",
 
     'category': 'Tools',
-    'version': '0.3',
+    'version': '0.6',
     "license": "AGPL-3",
     'author': "Leandro Augusto <leandro@leandroaugusto.eti.br>",
 
@@ -34,6 +34,7 @@
     'depends': ['base','zay_sample_crud'],
     'data': [
         'view/sample_crud_workflow.xml',
+        'view/sample_crud_view.xml',
     ],
     'installable': True,
     'auto_install': True,
