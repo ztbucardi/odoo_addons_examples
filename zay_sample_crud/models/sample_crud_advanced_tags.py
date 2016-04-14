@@ -18,8 +18,16 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.       #
 ###############################################################################
 
-from . import sample_crud
-from . import sample_crud_advanced
-from . import sample_crud_advanced_category
-from . import sample_crud_advanced_tags
-#from . import <inherited-name>_<model-name>
+from openerp import models, fields, api
+
+import logging
+_logger = logging.getLogger(__name__)
+
+
+class ZaySampleCrudAdvancedTags(models.Model):
+    _name='zay.sample.crud.advanced.tags'
+
+    name = fields.Char( string = 'Nome')
+    description = fields.Text()
+    active = fields.Boolean(string = 'Ativo ')
+    value = fields.Float()

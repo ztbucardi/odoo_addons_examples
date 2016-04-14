@@ -21,7 +21,7 @@
     'name': "Zaytech - Sample of CRUD",
 
     'category': 'Uncategorized',
-    'version': '0.06',
+    'version': '0.07',
     "license": "AGPL-3",
     'author': "Leandro Augusto <leandro@leandroaugusto.eti.br>",
 
@@ -36,6 +36,7 @@
         'view/sample_crud_views.xml',
         'view/sample_crud_advanced_views.xml',
         'view/sample_crud_advanced_category_views.xml',
+        'view/sample_crud_advanced_tags_views.xml',
         #'view/sample_crud_workflow.xml',
     ],
     'installable': True,
