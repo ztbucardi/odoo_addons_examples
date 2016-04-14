@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<openerp>
+    <data>
+      <!-- Menu principal -->
+      <menuitem name='Sample' id='zay_sample_crud_main_menu'  />
+      <!--
+      Para implementar sobre algum outro menu principal,
+      use conforme o exemplo abaixo:
+      <menuitem name='Livraria' id='bookstore_id' parent='base.menu_base_partner'  />
+      -->
+
+      <!-- Sub menus de forma hierarquica-->
+      <menuitem name='Submenu 1' id='zay_sample_crud_sub1_menu' parent='zay_sample_crud_main_menu'/>
+      <menuitem name='Submenu 2' id='zay_sample_crud_sub2_menu' parent='zay_sample_crud_main_menu'/>
+      <menuitem name='Submenu 2.1' id='zay_sample_crud_sub2_1_menu' parent='zay_sample_crud_sub2_menu'/>
+    </data>
+</openerp>

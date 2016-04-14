@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8'?>
+<openerp>
+    <data>
+
+      <!-- Exemplo de FORM -->
+      <record id='zay_sample_crud_advanced_form' model='ir.ui.view'>
+          <field name='name'>zay.sample.crud.advanced.form</field>
+          <field name='model'>zay.sample.crud.advanced</field>
+          <field name='type'>form</field>
+          <field name='arch' type='xml'>
+          <form string='sample crud'>
+              <group>
+                  <field name='name'/>
+                  <field name='summary'/>
+                  <field name='description'/>
+                  <field name='active'/>
+                  <field name='position'/>
+                  <field name='value'/>
+                  <field name='photo'/>
+                  <field name='classification'/>
+              </group>
+            </form>
+            </field>
+      </record>
+
+      <!-- Exemplo de TREE -->
+      <record id='zay_sample_crud_advanced_tree' model='ir.ui.view'>
+          <field name='name'>zay.sample.crud.advanced.tree</field>
+          <field name='model'>zay.sample.crud.advanced</field>
+          <field name='type'>tree</field>
+          <field name='arch' type='xml'>
+          <tree string='sample tree'>
+            <field name='name'/>
+            <field name='summary'/>
+            <field name='description'/>
+            <field name='active'/>
+            <field name='position'/>
+            <field name='value'/>
+            <field name='classification'/>
+          </tree>
+          </field>
+      </record>
+
+      <!-- Exemplo de ACTION -->
+      <record id='zay_sample_crud_advanced_action' model='ir.actions.act_window'>
+          <field name='name'>Sample CRUD Advanced</field>
+          <field name='res_model'>zay.sample.crud.advanced</field>
+          <field name='view_type'>form</field>
+          <field name='view_mode'>tree,form</field>
+      </record>
+
+
+     <!-- Menu para o sistema de CRUD exemplo -->
+     <menuitem name='Sample CRUD Advange' id='zay_sample_crud_advanced_menu_crud'
+       parent='zay_sample_crud_sub1_menu' action='zay_sample_crud_advanced_action'/>
+
+  </data>
+</openerp>

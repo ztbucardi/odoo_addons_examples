@@ -18,5 +18,6 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.       #
 ###############################################################################
 
-from . import model_name
+from . import sample_crud
+from . import sample_crud_advanced
 #from . import <inherited-name>_<model-name>

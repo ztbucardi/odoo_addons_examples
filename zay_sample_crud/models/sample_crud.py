@@ -23,5 +23,20 @@ from openerp import models, fields, api
 import logging
 _logger = logging.getLogger(__name__)
 
-class ModelName(models.Model):
-    _inherit = "model.name"
+
+class ZaySampleCrud(models.Model):
+    _name='zay.sample.crud'
+
+    # Exemplo de campos simples
+    name = fields.Char( string = 'Nome')
+    summary = fields.Text()
+    description = fields.Html()
+    active = fields.Boolean(string = 'Ativo ?')
+    position = fields.Integer()
+    value = fields.Float()
+    photo = fields.Binary()
+    classification = fields.Selection(selection=[('class1', 'Class 1'), ('class2', 'Class 2') ])
+
+    # Exemplo de campos avancado
+    #aselection = fields.Selection(selection='a_function_name')
+    #...

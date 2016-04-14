@@ -2,6 +2,7 @@
 ###############################################################################
 #                                                                             #
 # Copyright (C) 2016 - Leandro Augusto  <leandro@leandroaugusto.eti.br>       #
+# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).               #
 #                                                                             #
 # This program is free software: you can redistribute it and/or modify        #
 # it under the terms of the GNU Affero General Public License as published by #
@@ -17,24 +18,5 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.       #
 ###############################################################################
 
-{
-    'name': "Zaytech - Skeleton",
-    
-    'category': 'Uncategorized',
-    'version': '0.01',
-    "license": "AGPL-3",
-    'author': "Leandro Augusto <leandro@leandroaugusto.eti.br>",
-
-    'website': "http://www.leandroaugusto.eti.br",
-    'summary': """Estrutura modelo para addons Zaytech""",
-    'description': """
-        Este addons tem a estrutura modelo para addons Zaytech
-        """,
-    'depends': ['base'],
-    'data': [
-        'view/menu.xml',
-        'view/views.xml',
-    ],
-    'installable': True,
-    'auto_install': True,
-}
+from . import models
+#from .hooks import pre_init_hook, post_init_hook, uninstall_hook
