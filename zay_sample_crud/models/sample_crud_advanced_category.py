@@ -2,6 +2,7 @@
 ###############################################################################
 #                                                                             #
 # Copyright (C) 2016 - Leandro Augusto  <leandro@leandroaugusto.eti.br>       #
+# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).               #
 #                                                                             #
 # This program is free software: you can redistribute it and/or modify        #
 # it under the terms of the GNU Affero General Public License as published by #
@@ -17,27 +18,16 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.       #
 ###############################################################################
 
-{
-    'name': "Zaytech - Sample of CRUD",
+from openerp import models, fields, api
 
-    'category': 'Uncategorized',
-    'version': '0.06',
-    "license": "AGPL-3",
-    'author': "Leandro Augusto <leandro@leandroaugusto.eti.br>",
+import logging
+_logger = logging.getLogger(__name__)
 
-    'website': "http://www.leandroaugusto.eti.br",
-    'summary': """Addons exemplo para implementar um sistema de CRUD""",
-    'description': """
-        Este addons tem a estrutura base para implementar um sistema de CRUD
-        """,
-    'depends': ['base'],
-    'data': [
-        'view/sample_crud_menu.xml',
-        'view/sample_crud_views.xml',
-        'view/sample_crud_advanced_views.xml',
-        'view/sample_crud_advanced_category_views.xml',
-        #'view/sample_crud_workflow.xml',
-    ],
-    'installable': True,
-    'auto_install': True,
-}
+
+class ZaySampleCrudAdvancedCategory(models.Model):
+    _name='zay.sample.crud.advanced.category'
+
+    name = fields.Char( string = 'Nome')
+    description = fields.Text()
+    active = fields.Boolean(string = 'Ativo ')
+    value = fields.Float()

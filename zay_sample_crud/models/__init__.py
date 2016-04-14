@@ -20,4 +20,5 @@
 
 from . import sample_crud
 from . import sample_crud_advanced
+from . import sample_crud_advanced_category
 #from . import <inherited-name>_<model-name>
